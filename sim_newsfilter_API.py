@@ -53,10 +53,7 @@ def getFeatures(item_id,item_nlp_info,lang):
 #余弦相似度（不考虑权重）
 def get_cosine(words1,words2):
     word_dict = []
-    for word in words1:
-        if word not in word_dict:
-            word_dict.append(word)
-    for word in words2:
+    for word in words1+words2:
         if word not in word_dict:
             word_dict.append(word)
 
